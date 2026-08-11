@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nandini Jaiswal — Figma Portfolio</title>
+<meta name="description" content="Nandini Jaiswal — software engineering portfolio designed as a miniature collaborative design tool.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand-area">
+      <button class="figma-mark" id="homeBtn" title="Home">N</button>
+      <div class="file-title"><b>Nandini Jaiswal</b><span>/</span><span>Winter 2027 Application</span><i class="saved-dot"></i><small>Saved</small></div>
+    </div>
+    <div class="top-tabs">
+      <button class="top-tab active" data-view="design">Design</button>
+      <button class="top-tab" data-view="prototype">Prototype</button>
+      <button class="top-tab" data-view="inspect">Inspect</button>
+    </div>
+    <div class="top-actions">
+      <button class="top-icon" id="cmdBtn">⌘K</button>
+      <button class="present" id="presentBtn">▶ Present</button>
+      <button class="share" id="shareBtn">Share</button>
+      <div class="avatar">NJ</div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <aside class="toolbar">
+      <button class="tool active" data-tool="move" title="Move / V">↖</button>
+      <button class="tool" data-tool="frame" title="Frame / F">▣</button>
+      <button class="tool" data-tool="rectangle" title="Rectangle / R">□</button>
+      <button class="tool" data-tool="ellipse" title="Ellipse / O">○</button>
+      <button class="tool" data-tool="line" title="Line / L">╱</button>
+      <button class="tool" data-tool="pen" title="Pen / P">⌁</button>
+      <button class="tool" data-tool="text" title="Text / T">T</button>
+      <div class="tool-sep"></div>
+      <button class="tool" id="zoomMinus">−</button>
+      <button class="zoom-value" id="zoomValue">100%</button>
+      <button class="tool" id="zoomPlus">+</button>
+      <button class="tool" id="fitBtn">⌗</button>
+    </aside>
+
+    <aside class="layers-panel">
+      <div class="panel-header"><b>Layers</b><span>☷</span></div>
+      <div class="search"><span>⌕</span><input id="layerSearch" placeholder="Search layers"></div>
+      <div class="layer-section">
+        <div class="group-title">PORTFOLIO</div>
+        <button class="layer selected" data-target="cover"><span>▣</span> Cover — Nandini</button>
+        <button class="layer" data-target="about"><span>▣</span> About / Engineering DNA</button>
+        <button class="layer" data-target="projects"><span>▣</span> Projects — 03</button>
+        <button class="layer" data-target="placeleet"><span>▣</span> PlaceLeet — Deep Dive</button>
+        <button class="layer" data-target="systems"><span>▣</span> Systems Thinking</button>
+        <button class="layer" data-target="research"><span>▣</span> MapMaker Index</button>
+        <button class="layer" data-target="journey"><span>▣</span> Journey</button>
+        <button class="layer" data-target="contact"><span>▣</span> Contact</button>
+      </div>
+      <div class="layer-section">
+        <div class="group-title">COMPONENTS</div>
+        <button class="layer component-jump" data-component="button"><span class="purple">◈</span> Button / Primary</button>
+        <button class="layer component-jump" data-component="card"><span class="purple">◈</span> Project Card</button>
+        <button class="layer component-jump" data-component="badge"><span class="purple">◈</span> Status Badge</button>
+      </div>
+      <div class="layers-bottom">
+        <div class="mini-title">MATCH SIGNAL</div>
+        <div class="signal"><div><span>Product engineering</span><b>92</b></div><i><em style="width:92%"></em></i></div>
+        <div class="signal"><div><span>Platform / systems</span><b>88</b></div><i><em style="width:88%"></em></i></div>
+        <div class="signal"><div><span>AI / experimentation</span><b>96</b></div><i><em style="width:96%"></em></i></div>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <div class="canvas-top">
+        <div><span class="crumb">Nandini Jaiswal</span><span>/</span><b>Winter 2027 Application</b></div>
+        <div class="canvas-actions"><button id="toggleGrid">▦</button><button id="commentMode">◌</button><button id="openPrototype">▶ Prototype</button></div>
+      </div>
+      <div class="canvas" id="canvas">
+        <div class="grid" id="grid"></div>
+
+        <!-- COVER -->
+        <section class="frame" id="cover" data-name="Cover — Nandini" data-w="1440" data-h="900">
+          <div class="frame-label"><span>FRAME</span><b>01 — COVER</b><span>1440 × 900</span></div>
+          <div class="cover-bg">
+            <div class="noise"></div>
+            <div class="cover-left">
+              <div class="status-pill"><i></i> SOFTWARE ENGINEER · WINTER 2027</div>
+              <h1>I build software<br><span>people can use.</span></h1>
+              <p class="lead">Nandini Jaiswal · CSE (AI/ML) · GHRCE</p>
+              <p class="intro">Software engineer working across Java, full-stack systems, cloud and AI/ML. I like turning ambiguous problems into interfaces, reliable services, experiments and tools that people can actually use.</p>
+              <div class="cover-buttons">
+                <button class="btn purple-btn" data-go="projects">Explore the work <b>↘</b></button>
+                <button class="btn light-btn" id="resumeAction">Open résumé ↗</button>
+              </div>
+              <div class="cover-stats">
+                <div><small>GRADUATION</small><b>JUNE 2027</b></div>
+                <div><small>CODING PROBLEMS</small><b>400+</b></div>
+                <div><small>CGPA</small><b>8.56 / 10</b></div>
+              </div>
+            </div>
+            <div class="cover-visual">
+              <div class="cursor cursor-a">Nandini <i></i></div>
+              <div class="cursor cursor-b">Engineer <i></i></div>
+              <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+              <div class="system-core"><span>BUILD</span><b>+</b><span>LEARN</span></div>
+              <div class="orbit-chip c1">Java</div><div class="orbit-chip c2">React</div><div class="orbit-chip c3">ML</div><div class="orbit-chip c4">Systems</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="frame" id="about" data-name="About / Engineering DNA" data-w="1440" data-h="760">
+          <div class="frame-label"><span>FRAME</span><b>02 — ENGINEERING DNA</b><span>1440 × 760</span></div>
+          <div class="about-frame">
+            <div class="frame-title"><div class="eyebrow">01 / ENGINEERING DNA</div><h2>Curious by default.<br><em>Systematic by design.</em></h2></div>
+            <div class="dna-grid">
+              <article><b>01</b><h3>Make the interface explicit.</h3><p>Good software starts with clear contracts between components, services and people. I gravitate toward APIs, boundaries and workflows that make behaviour understandable.</p></article>
+              <article><b>02</b><h3>Measure the loop.</h3><p>For ML and agent systems, the final answer is not enough. I care about reproducibility, behavioural metrics, evaluation and what happens between inputs and outcomes.</p></article>
+              <article><b>03</b><h3>Ship, then improve.</h3><p>Hackathons, community engineering and ongoing products taught me to make decisions under constraints, get feedback early and iterate instead of waiting for perfection.</p></article>
+            </div>
+            <div class="skill-strip">
+              <span>Java</span><span>Python</span><span>C++</span><span>Spring Boot</span><span>React</span><span>REST APIs</span><span>TensorFlow</span><span>PyTorch</span><span>FastAPI</span><span>SQL</span><span>Cloud</span><span>LLMs</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="frame" id="projects" data-name="Projects — 03" data-w="1440" data-h="1040">
+          <div class="frame-label"><span>FRAME</span><b>03 — SELECTED WORK</b><span>1440 × 1040</span></div>
+          <div class="projects-frame">
+            <div class="section-head"><div><div class="eyebrow">02 / SELECTED WORK</div><h2>Projects are<br><em>systems in disguise.</em></h2></div><p>Three different problems. One consistent approach: understand the constraint, design the workflow, build the system, measure what happened.</p></div>
+            <div class="project-cards">
+              <button class="project-card big" data-project="placeleet">
+                <div class="project-art dark-art"><span class="art-label">LIVE BUILD / PLACELEET</span><div class="editor-mini"><div class="editor-head"><i></i><i></i><i></i><span>solution.cpp</span></div><pre><em>class</em> PracticeSession {
+  <em>bool</em> logicVerified;
+  <em>bool</em> hintsUnlocked;
+  <em>void</em> submit() {
+    translateTo(<em>3</em> languages);
+  }
+};</pre><div class="editor-foot">C++ <span>·</span> Java <span>·</span> Python</div></div><div class="floating-tag">SECURE EXECUTION</div></div>
+                <div class="card-copy"><small>01</small><h3>PlaceLeet</h3><p>Placement coding platform combining a scratchpad + IDE, asynchronous solution translation, secure execution and gated smart assistance.</p><div class="tag-row"><span>Spring Boot</span><span>React</span><span>REST</span><span>LLM</span></div></div>
+              </button>
+              <button class="project-card" data-project="manovani">
+                <div class="project-art audio-art"><span class="art-label">114 GB / MULTIMODAL</span><div class="bars"></div><div class="audio-center">TEXT + AUDIO + VISION</div></div>
+                <div class="card-copy"><small>02</small><h3>ManoVani</h3><p>Multimodal learning pipeline with vocal biomarkers and structured feature extraction.</p><div class="tag-row"><span>NLP</span><span>ML</span><span>COVAREP</span></div></div>
+              </button>
+              <button class="project-card" data-project="mapmaker">
+                <div class="project-art agent-art"><span class="art-label">PPO / EVALUATION</span><div class="agent-map"><i></i><i></i><i></i><i></i><svg viewBox="0 0 400 210"><path d="M25 170 C85 30 125 200 205 100 S315 50 380 145"/></svg></div><div class="metric">MI / 0.94</div></div>
+                <div class="card-copy"><small>03</small><h3>MapMaker Index</h3><p>Reproducible RL experiments and behavioural metrics for diagnosing agent policy instability.</p><div class="tag-row"><span>RL</span><span>PPO</span><span>Research</span></div></div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PLACELEET DEEP DIVE -->
+        <section class="frame" id="placeleet" data-name="PlaceLeet — Deep Dive" data-w="1440" data-h="1050">
+          <div class="frame-label"><span>FRAME</span><b>04 — PLACELEET / DEEP DIVE</b><span>1440 × 1050</span></div>
+          <div class="place-frame">
+            <div class="eyebrow">PROJECT 01 / SYSTEM INSPECTOR</div>
+            <div class="place-heading"><h2>What if a coding platform<br><em>trained reasoning, not copying?</em></h2><p>PlaceLeet is an ongoing end-to-end platform built around that question.</p></div>
+            <div class="architecture">
+              <div class="arch-col"><span>01</span><b>Candidate</b><small>Problem + intent</small><div class="arch-node">Scratchpad</div><div class="connector"></div><div class="arch-node">IDE</div></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-col"><span>02</span><b>Application</b><small>Spring Boot / REST</small><div class="arch-node accent">Submission API</div><div class="connector"></div><div class="arch-node">Access control</div></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-col"><span>03</span><b>Execution</b><small>Isolated environment</small><div class="arch-node">Code runner</div><div class="connector"></div><div class="arch-node">Verifier</div></div>
+              <div class="arch-arrow">→</div>
+              <div class="arch-col"><span>04</span><b>Translation</b><small>Async pipeline</small><div class="arch-node">C++ ↔ Java ↔ Python</div><div class="connector"></div><div class="arch-node">Verified output</div></div>
+            </div>
+            <div class="place-principles"><div><b>SECURITY</b><span>Separate assistance from execution.</span></div><div><b>LEARNING</b><span>Gate smart help behind demonstrated logic.</span></div><div><b>SCALE</b><span>Move translation into an asynchronous pipeline.</span></div></div>
+            <button class="btn purple-btn" id="openPlayground">Open interactive product demo ↗</button>
+          </div>
+        </section>
+
+        <!-- SYSTEMS -->
+        <section class="frame" id="systems" data-name="Systems Thinking" data-w="1440" data-h="820">
+          <div class="frame-label"><span>FRAME</span><b>05 — SYSTEMS THINKING</b><span>1440 × 820</span></div>
+          <div class="systems-frame">
+            <div class="eyebrow">03 / HOW I ENGINEER</div><h2>Don't just build the feature.<br><em>Build the loop around it.</em></h2>
+            <div class="loop">
+              <div class="loop-node n-user"><b>USER</b><small>intent</small></div>
+              <div class="loop-node n-interface"><b>INTERFACE</b><small>contract</small></div>
+              <div class="loop-node n-service"><b>SERVICE</b><small>logic</small></div>
+              <div class="loop-node n-data"><b>DATA</b><small>state</small></div>
+              <div class="loop-node n-observe"><b>OBSERVE</b><small>feedback</small></div>
+              <svg viewBox="0 0 1100 350"><path d="M120 175 H320 M390 175 H520 M590 175 H720 M790 175 C980 175 1000 315 780 315 H320 C200 315 130 285 130 225"/></svg>
+            </div>
+            <div class="system-notes"><span><b>Failure modes</b> · networks · invalid input · drift</span><span><b>Interfaces</b> · contracts · boundaries · ownership</span><span><b>Feedback</b> · metrics · logs · evaluation</span></div>
+          </div>
+        </section>
+
+        <!-- RESEARCH -->
+        <section class="frame dark-frame" id="research" data-name="MapMaker Index" data-w="1440" data-h="900">
+          <div class="frame-label"><span>FRAME</span><b>06 — MAPMAKER INDEX</b><span>1440 × 900</span></div>
+          <div class="research-frame">
+            <div class="research-copy"><div class="eyebrow">04 / RESEARCH</div><h2>Can we measure<br><em>understanding?</em></h2><p>MapMaker Index is a research framework exploring whether agent behaviour can reveal genuine understanding versus superficial task completion. The work uses reproducible PPO environments and structured behavioural metrics.</p><div class="research-box"><strong>MI</strong><span>MAPMAKER INDEX</span><small>Behavioural evaluation framework</small></div></div>
+            <div class="experiment"><div class="exp-top"><span>EXPERIMENT / PPO-07</span><b>● RUNNING</b></div><div class="plot"><div class="plot-line"></div><i class="pt pt1"></i><i class="pt pt2"></i><i class="pt pt3"></i><i class="pt pt4"></i><i class="pt pt5"></i><label>POLICY STABILITY</label><small>EPISODES →</small></div><div class="exp-bottom"><span>REPRODUCIBILITY</span><b>0.94</b><span>DIAGNOSTIC SIGNAL</span><b>0.87</b></div></div>
+          </div>
+        </section>
+
+        <!-- JOURNEY -->
+        <section class="frame" id="journey" data-name="Journey" data-w="1440" data-h="720">
+          <div class="frame-label"><span>FRAME</span><b>07 — JOURNEY</b><span>1440 × 720</span></div>
+          <div class="journey-frame"><div class="eyebrow">05 / TRAJECTORY</div><h2>Still learning.<br><em>Still shipping.</em></h2><div class="timeline">
+            <div><small>2023</small><b>GHRCE</b><p>Started B.Tech CSE (AI/ML).</p></div>
+            <div><small>2024</small><b>HackTheSpace · SIH</b><p>Built under pressure and reached national finals.</p></div>
+            <div><small>2025</small><b>Hackathons · Community</b><p>Central India Hackathon runner-up and community engineering.</p></div>
+            <div class="current"><small>2026</small><b>PlaceLeet · Research</b><p>Building a product while developing MapMaker Index.</p></div>
+            <div><small>2027</small><b>Next system</b><p>Looking for a team where I can learn fast and ship meaningful software.</p></div>
+          </div></div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="frame contact-frame" id="contact" data-name="Contact" data-w="1440" data-h="620">
+          <div class="frame-label"><span>FRAME</span><b>08 — CONTACT</b><span>1440 × 620</span></div>
+          <div class="contact-inner"><div><div class="eyebrow">06 / LET'S BUILD</div><h2>Have a hard problem?<br><span>Let's talk.</span></h2><p>Interested in software engineering, product infrastructure, AI systems, and the intersection of all three.</p></div><div class="contact-card"><small>EMAIL</small><a href="mailto:nandinijaiswal783@gmail.com">nandinijaiswal783@gmail.com</a><button id="copyEmail">Copy email</button><div class="social-links"><a href="https://github.com/" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a><a href="https://leetcode.com/" target="_blank">LeetCode ↗</a></div></div></div>
+        </section>
+      </div>
+    </section>
+
+    <aside class="properties">
+      <div class="properties-tabs"><button class="active">Design</button><button>Prototype</button></div>
+      <div class="property-block"><div class="property-head">Selection <span>⌃</span></div><div class="selection"><i>▣</i><b id="selectedName">Cover — Nandini</b></div></div>
+      <div class="property-block"><div class="property-head">Position <span>⌃</span></div><div class="fields"><label>X<input id="px" value="0" readonly></label><label>Y<input id="py" value="0" readonly></label><label>W<input id="pw" value="1440" readonly></label><label>H<input id="ph" value="900" readonly></label></div></div>
+      <div class="property-block"><div class="property-head">Auto layout <span>⌃</span></div><div class="auto-card"><span>↕ Vertical</span><span>Gap 24</span><span>Padding 32</span></div></div>
+      <div class="property-block"><div class="property-head">Appearance <span>⌃</span></div><div class="property-line"><span>Opacity</span><b>100%</b></div><div class="property-line"><span>Radius</span><b>8</b></div><div class="property-line"><span>Blend</span><b>Normal</b></div></div>
+      <div class="property-block"><div class="property-head">Fill <span>⌃</span></div><div class="fill-line"><i></i><span>#7C5CFC</span><b>100%</b></div></div>
+      <div class="property-block"><div class="property-head">Prototype <span>⌃</span></div><div class="prototype-row"><span>On click</span><b>Navigate</b><i>→</i></div><div class="prototype-row"><span>Transition</span><b>Smart animate</b><i>300ms</i></div></div>
+      <div class="property-block"><button class="export" id="exportBtn">Export selection <span>↗</span></button></div>
+    </aside>
+  </main>
+</div>
+
+<!-- COMMAND PALETTE -->
+<div class="overlay hidden" id="commandOverlay">
+  <div class="command">
+    <input id="commandInput" placeholder="Search or jump to a frame…">
+    <div id="commandResults">
+      <button data-command="cover"><span>Go to Cover</span><kbd>1</kbd></button>
+      <button data-command="projects"><span>Open Projects</span><kbd>2</kbd></button>
+      <button data-command="placeleet"><span>Inspect PlaceLeet</span><kbd>3</kbd></button>
+      <button data-command="systems"><span>Systems Thinking</span><kbd>4</kbd></button>
+      <button data-command="research"><span>MapMaker Index</span><kbd>5</kbd></button>
+      <button data-command="contact"><span>Contact Nandini</span><kbd>6</kbd></button>
+    </div>
+    <footer>ESC to close · ↑↓ navigate · ENTER select</footer>
+  </div>
+</div>
+
+<!-- PROJECT MODAL -->
+<div class="overlay hidden" id="projectOverlay">
+  <div class="project-modal">
+    <button class="close" data-close>×</button>
+    <div class="eyebrow" id="modalEyebrow">PROJECT</div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <div class="modal-grid" id="modalGrid"></div>
+    <button class="btn purple-btn" id="modalGo">Open frame ↗</button>
+  </div>
+</div>
+
+<!-- PLAYGROUND -->
+<div class="overlay hidden" id="playgroundOverlay">
+  <div class="playground">
+    <div class="play-head"><div><span class="green-dot"></span> PlaceLeet / Practice Session</div><button class="close" data-close>×</button></div>
+    <div class="play-body">
+      <aside class="problem-list"><small>PROBLEMS</small><button class="active">Two Sum</button><button>Valid Parentheses</button><button>Merge Intervals</button><button>LRU Cache</button></aside>
+      <section class="problem"><span class="eyebrow">PLACEMENT PRACTICE</span><h2>Two Sum</h2><p>Given an array of integers and a target, return indices of the two numbers that add up to the target.</p><div class="constraint"><b>Learning mode</b><span>Smart assistance locked until baseline logic is demonstrated.</span></div><div class="scratch"><header>Scratchpad <span>⌘ ↵</span></header><textarea id="scratchpad">Think before you code…
+
+1. What data structure gives O(1) lookup?
+2. What do we need to store?
+3. What invariant should hold?</textarea></div></section>
+      <section class="code-panel"><header><span>solution.java</span><select><option>Java</option><option>C++</option><option>Python</option></select></header><textarea id="codeArea">class Solution {
+  public int[] twoSum(int[] nums, int target) {
+    // Start with your baseline logic.
+    return new int[]{};
+  }
+}</textarea><div class="code-actions"><button id="runCode">▶ Run</button><button id="hintBtn">◎ Request hint</button></div><div id="runnerOutput" class="runner-output">Ready. Submit your baseline solution first.</div></section>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
